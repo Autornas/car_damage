@@ -1,0 +1,27 @@
+# Experiment outputs — one timestamped folder per run, reproducible on its
+# own (config + checkpoint + curves + metrics). Not committed.
+experiments/
+
+# train.py's checkpoint_dir (see configs/phase1_classifier.yaml) — model
+# checkpoints and training curve plots, not committed.
+checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+*.log
+
+# Environments
+.venv/
+venv/
+env/
+
+# Local datasets and image collections
+/data/
+/Nuotraukos/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pillow
+numpy
+
+# car_damage.models.production + car_damage.data.transforms pull these in
+# transitively (see src/car_damage/data/__init__.py and models/production/__init__.py)
+torch
+torchvision
+albumentations
+opencv-python
+scikit-learn

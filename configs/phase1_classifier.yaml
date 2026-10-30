@@ -1,0 +1,14 @@
+# Phase 1: car damage CLASSIFIER config (damaged vs not_damaged).
+#
+# Consumed by src/car_damage/training/train.py via `--config`. Values below
+# are the same defaults the original flat train.py used as argparse
+# defaults -- nothing here is a placeholder.
+
+data_dir: data          # expects <data_dir>/damaged and <data_dir>/not_damaged
+epochs: 10               # stage 1: classifier head only, backbone frozen
+finetune_epochs: 5       # stage 2: last conv block unfrozen, lower LR
+batch_size: 32
+lr: 0.001                # stage 1 learning rate
+finetune_lr: 0.00001     # stage 2 learning rate
+num_workers: 2
+checkpoint_dir: checkpoints

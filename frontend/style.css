@@ -1,0 +1,230 @@
+:root {
+  color-scheme: light dark;
+  --accent: #ff3b30;
+  --border: #ccc;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem 3rem;
+  line-height: 1.5;
+}
+
+h1 {
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: #666;
+  margin-top: 0;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+label.control-group {
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 220px;
+}
+
+button {
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status {
+  min-height: 1.5em;
+  font-weight: 600;
+}
+
+.status.error {
+  color: #d40000;
+}
+
+.status.loading {
+  color: #666;
+}
+
+.status.success {
+  color: #1a7f37;
+}
+
+.status.empty {
+  color: #8a6d00;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+canvas {
+  border: 1px solid var(--border);
+  max-width: 100%;
+  background: #f5f5f5;
+  cursor: default;
+}
+
+canvas.draw-mode {
+  cursor: crosshair;
+}
+
+.canvas-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.edit-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-controls button {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+button.active {
+  background: #1a7f37;
+}
+
+.hint {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.detections-panel {
+  min-width: 220px;
+  flex: 1;
+}
+
+.detections-panel h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.detections-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detections-panel li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.retrain-panel {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.retrain-panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+  background: none;
+  color: inherit;
+  border-radius: 6px 6px 0 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  opacity: 0.6;
+}
+
+.tab-btn.active {
+  opacity: 1;
+  background: var(--accent);
+  color: white;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.queue-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.queue-progress p {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 10px;
+  border-radius: 5px;
+  background: #e5e5e5;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #1a7f37;
+  transition: width 0.2s ease;
+}
+
+.uncertainty-indicator {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.uncertainty-low {
+  color: #d40000;
+}
+
+.uncertainty-medium {
+  color: #8a6d00;
+}
+
+.uncertainty-high {
+  color: #1a7f37;
+}

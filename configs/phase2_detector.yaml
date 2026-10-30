@@ -1,0 +1,16 @@
+# Phase 2: car damage DETECTOR config.
+#
+# Consumed by src/car_damage/training/train_detector.py via `--config`.
+#
+# This is a PILOT-BATCH SMOKE-TEST config (60 annotated images, 2 epochs)
+# -- see data/raw/phase2_pilot/README.md for the data's provenance and
+# caveats. It is not tuned for real training; the point of running it is
+# confirming images, boxes, model, and loop wire together correctly, not
+# producing a usable detector. Real training needs low thousands of boxes
+# (this pilot batch has 93) plus a properly tuned config.
+
+data_dir: data/raw/phase2_pilot   # expects images/ + annotations.json (see that dir's README.md)
+batch_size: 2                      # pilot set is tiny -- 45 train / 15 val images
+epochs: 10                          # smoke test, not real training
+lr: 0.005                          # SGD lr, matching torchvision's detection fine-tuning recipe
+checkpoint_dir: checkpoints/phase2_detector
